@@ -3,6 +3,9 @@ An embedded program to control a led strip wrapped around a cylinder. Based on m
 
 The code is not designed to be the most readable but to be robust, so it can be quite tricky to understand, sorry !
 
+This branch is designed for a single color 12v led strip.
+The strip parameters are put is the user_constants file.
+
 ## Behavior
 
 base behavior:
@@ -19,14 +22,8 @@ Error and alerts are displayed as blinking animations:
 - unhandled: fast orange blinks
 
 ### User defined behaviors
-The user MUST define the target behavior for the target uses.
 
-Some functions are defined in user_functions.h, and must be implemented in user_functions.cpp
-They allow the user to program the exact desired behavior.
-
-Some branches are available for base models:
-- constant_current_control_base: Program designed for a constant color led strip
-- indexable_strip_base: program designed for an indexable led strip wrapped around the lamp body
+- On double click, the led strip will be put to max luminosity
 
 ## File details
 - LampColorControler.ino: main class of the program, containing the setup and loop functions
